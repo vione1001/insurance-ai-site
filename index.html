@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 保險需求分析系統</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<div class="max-w-7xl mx-auto p-6">
+
+<h1 class="text-5xl font-black text-center mb-4">
+新光人壽 AI 客戶需求分析系統
+</h1>
+
+<p class="text-center text-slate-300 mb-10">
+互動式保險需求分析網站
+</p>
+
+<div class="grid lg:grid-cols-2 gap-6 mb-8">
+
+<div class="bg-white/10 rounded-3xl p-6 border border-white/10">
+<h2 class="text-2xl font-bold mb-5">客戶資料分析</h2>
+
+<input class="w-full p-4 rounded-2xl bg-slate-900 mb-4" placeholder="客戶姓名">
+
+<input class="w-full p-4 rounded-2xl bg-slate-900 mb-4" placeholder="年齡">
+
+<textarea class="w-full p-4 rounded-2xl bg-slate-900 h-32" placeholder="需求與風險"></textarea>
+</div>
+
+<div class="bg-white/10 rounded-3xl p-6 border border-white/10">
+<h2 class="text-2xl font-bold mb-5">商品上傳</h2>
+
+<input type="file" class="w-full mb-6">
+
+<button onclick="analyze()" class="w-full bg-blue-500 hover:bg-blue-400 p-4 rounded-2xl font-bold">
+開始 AI 分析
+</button>
+
+<div id="result" class="mt-6 hidden">
+
+<div class="bg-slate-900 p-4 rounded-2xl">
+<p>✔ 醫療保障不足</p>
+<p>✔ 家庭責任風險高</p>
+<p>✔ 建議增加重大傷病規劃</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="bg-green-500/20 p-6 rounded-3xl border border-green-400">
+<h3 class="text-3xl font-black mb-4">A 基礎方案</h3>
+<p class="text-4xl font-black mb-4">NT$2,500</p>
+<p>基本醫療＋意外保障</p>
+</div>
+
+<div class="bg-yellow-500/20 p-6 rounded-3xl border border-yellow-400">
+<h3 class="text-3xl font-black mb-4">B 平衡方案</h3>
+<p class="text-4xl font-black mb-4">NT$4,800</p>
+<p>重大傷病＋完整醫療</p>
+</div>
+
+<div class="bg-red-500/20 p-6 rounded-3xl border border-red-400">
+<h3 class="text-3xl font-black mb-4">C 高階方案</h3>
+<p class="text-4xl font-black mb-4">NT$8,500</p>
+<p>高端醫療＋退休規劃</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function analyze(){
+document.getElementById('result').classList.remove('hidden')
+}
+</script>
+
+</body>
+</html>
